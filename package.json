@@ -1,0 +1,53 @@
+{
+  "name": "jurn",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "prod": "NODE_ENV=production nuxt build",
+    "start": "PORT=3333 nuxt start",
+    "start-prod": "NODE_ENV=production nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap-datepicker": "^1.7.1",
+    "bootstrap-daterangepicker": "^2.1.30",
+    "bootstrap-vue": "^1.4.1",
+    "cookies": "^0.7.1",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47",
+    "firebase": "^5.1.0",
+    "google-autocomplete-vue": "^1.0.17",
+    "jquery": "^3.3.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.21.0",
+    "moment-timezone": "^0.5.14",
+    "nuxt": "1.4.0",
+    "nuxt-dropzone": "^0.2.7",
+    "nuxt-sass-resources-loader": "^2.0.2",
+    "vee-validate": "^2.0.6",
+    "vue-cookie": "^1.1.4",
+    "vue-datetime-picker": "^0.2.1",
+    "vue-no-ssr": "^0.2.2",
+    "vue-stripe-elements": "^0.2.3",
+    "vue-the-mask": "^0.11.1",
+    "vuedraggable": "^2.16.0",
+    "upath": "1.0.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "body-parser": "^1.18.3",
+    "cross-env": "^5.1.6",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "4.7.2",
+    "sass-loader": "6.0.6",
+    "standard": "^11.0.1",
+    "vue-loader": "^13.7.2"
+  }
+}

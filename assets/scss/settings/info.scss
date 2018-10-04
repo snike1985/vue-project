@@ -1,0 +1,15 @@
+@import "../_var.scss";
+
+.notification-settings-table {
+  .m-checkbox {
+    input[disabled="disabled"]:checked ~ .custom-control-description {
+      span {
+        background: $metal;
+        border-color: $metal;
+        &:after {
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}

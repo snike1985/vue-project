@@ -1,0 +1,33 @@
+$opacity-num: 0;
+
+@while $opacity-num <= 9 {
+  .opacity-#{$opacity-num} {
+    opacity: #{ '.' + $opacity-num};
+  }
+  $opacity-num: $opacity-num + 1
+}
+
+$font-num: 0;
+
+@while $font-num <= 100 {
+  .font-#{$font-num} {
+    line-height: 1 !important;
+    font-size: #{$font-num + 'px'} !important;
+  }
+  $font-num: $font-num + 1
+}
+
+$col-table-num: 1;
+
+@while $col-table-num <= 12 {
+  .fixed-col-#{$col-table-num} {
+    td {
+      width: calc(100% / #{$col-table-num}) !important;
+    }
+    th {
+      width: calc(100% / #{$col-table-num}) !important;
+    }
+  }
+  $col-table-num: $col-table-num + 1
+}
+

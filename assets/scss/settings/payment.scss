@@ -1,0 +1,100 @@
+
+.settings-payment {
+  padding-bottom: 80px;
+
+  &__plan > div {
+    position: relative;
+  }
+  &__plan-head {
+    padding-bottom: 23px;
+    margin-bottom: 26px;
+    border-bottom: 1px dashed rgb(210, 215, 226);
+
+    dl {
+      margin-bottom: 0;
+    }
+    dd {
+      margin-bottom: -1px;
+      text-transform: capitalize;
+      font-size: 21px;
+      font-weight: 700;
+      color: #0b4084;
+    }
+  }
+  &__plan-title {
+    margin-bottom: 3px;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #8da1ab;
+  }
+  &__plan-duration {
+    font-size: 16px;
+    color: #4c505f;
+    text-transform: capitalize;
+  }
+  &__plan-info {
+
+    time {
+      display: block;
+      margin-bottom: 0;
+      margin-top: 6px;
+    }
+    > a {
+      margin: 10px 0 2px;
+
+      &:hover,
+      &:active {
+        color: #ff262f;
+        text-decoration: underline;
+      }
+    }
+    > div {
+
+      a:hover {
+        text-decoration: none !important;
+      }
+    }
+  }
+  &__plan-msg {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  &__form {
+    position: relative;
+  }
+  &__form-btns {
+    position: absolute;
+    right: -41px;
+    bottom: -94px;
+  }
+  &__methods {
+    display: flex;
+
+    > div {
+      width: 70%;
+      background: #f1f4fb;
+      border: 1px solid #ebedf2;
+      border-radius: 0.25rem 0 0 0.25rem;
+      padding: 0.65rem 1.25rem;
+      padding-right: 0;
+      color: #575962;
+      font-size: 1rem;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > .btn {
+      width: 30%;
+      border-radius: 0 0.25rem 0.25rem 0;
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 11px;
+    }
+  }
+}

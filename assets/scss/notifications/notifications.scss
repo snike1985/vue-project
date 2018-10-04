@@ -1,0 +1,46 @@
+.notification-page {
+  .notifications-list {
+    border-left: 2px solid #d2d7e2;
+    margin-left: 15px;
+
+    .one-notification {
+      padding-left: 55px;
+      position: relative;
+      &:first-of-type,
+      &:last-of-type {
+        &:before {
+          content: '';
+          left: -2px;
+          background: #f2f3f8;
+          width: 2px;
+          height: 50%;
+          display: block;
+          position: absolute;
+        }
+      }
+      &:first-of-type {
+        &:before {
+          top: 0;
+        }
+      }
+      &:last-of-type {
+        &:before {
+          bottom: 0;
+        }
+      }
+      &:after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border: 2px solid #d2d7e2;
+        background-color: #f2f3f8;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

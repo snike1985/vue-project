@@ -1,0 +1,25 @@
+.m-portlet__body {
+  .col-btn {
+    padding-right: 15px;
+    padding-left: 15px;
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+}
+.m-datatable.m-datatable--default {
+  .m-datatable__pager {
+    margin-top: 0;
+  }
+  .m-datatable__pager-nav {
+    display: inline-block;
+    margin-top: 0;
+  }
+  .m-datatable__pager-info {
+    display: inline-block;
+    margin-right: 30px;
+    float: none;
+    margin-top: 0;
+  }
+
+}

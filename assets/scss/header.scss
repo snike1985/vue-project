@@ -1,0 +1,117 @@
+@import "var";
+header {
+  position: fixed;
+  z-index: 101;
+  background: #fff;
+  height: 70px;
+  padding: 0 25px;
+  box-shadow: 0 5px 13px 0 rgba(12, 39, 72, 0.05);
+  .m-menu__item {
+    padding: 0 10px !important;
+  }
+  .notification-menu-item {
+    a {
+      position: relative;
+      display: inline-block;
+
+      i {
+        transition: color .15s;
+      }
+
+      &:hover {
+        i {
+          color: $info;
+        }
+      }
+    }
+    .m-badge {
+      font-size: 8px;
+      font-weight: bold;
+      position: absolute;
+      min-width: 14px;
+      min-height: auto;
+      line-height: 1;
+      padding: 3px;
+      right: -5px;
+    }
+  }
+  .company-name {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .m-header-menu {
+    margin-left: 35px;
+  }
+  .manage-crew-btn {
+    &.nuxt-link-exact-active {
+      pointer-events: none;
+      background: $metal;
+      border-color: $metal;
+      color: rgba($dark, 0.4);
+    }
+  }
+  .m-header-menu .m-menu__nav > .m-menu__item {
+    .m-menu__submenu {
+      width: 200px;
+      text-align: left;
+      .sub-menu__arrow {
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 8.5px 12px 8.5px;
+          border-color: transparent transparent #ffffff transparent;
+          position: absolute;
+          right: 7px;
+          top: 0;
+        }
+      }
+      .m-menu__subnav {
+        padding: 0;
+      }
+      li {
+        padding: 0 !important;
+        height: 45px;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #e6eaf3;
+        }
+        .m-menu__link {
+          padding: 0 15px !important;
+        }
+        .m-menu__link-text {
+          font-weight: 600 !important;
+        }
+
+        i {
+          transition: color .15s;
+        }
+
+        &:hover {
+
+          i.m-menu__link-icon {
+            color: $info !important;
+          }
+        }
+      }
+    }
+  }
+  .header-submenu-btn {
+    transition: color .15s;
+    span {
+      transition: color .15s;
+    }
+    i {
+      transition: color .15s;
+    }
+
+    &:hover {
+      color: $info !important;
+
+      i.m-menu__hor-arrow {
+        color: $info !important;
+      }
+    }
+  }
+}

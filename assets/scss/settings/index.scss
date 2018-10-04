@@ -1,0 +1,39 @@
+.notification-settings {
+  table {
+    tr {
+      td {
+        vertical-align: middle;
+      }
+      td[aria-colindex="1"] {
+        width: 60%;
+        word-break: break-all;
+      }
+      .m-checkbox {
+        margin-bottom: 0;
+        &.disabled {
+          cursor: initial;
+        }
+      }
+    }
+  }
+}
+.dark-title-table {
+  .m-brand {
+    box-shadow: 0 1px 15px 1px rgba(69, 65, 77, .08);
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  table.center-lines {
+    tr {
+
+      & > td:first-of-type, & > th:first-of-type {
+        padding-left: 40px;
+      }
+      & > td:not(:first-of-type), & > th:not(:first-of-type) {
+        text-align: center;
+      }
+    }
+  }
+}

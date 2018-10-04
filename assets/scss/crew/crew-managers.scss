@@ -1,0 +1,131 @@
+.crew-managers {
+  font-family: 'Muli', sans-serif;
+
+  &__head {
+    margin-bottom: 30px;
+
+    .crew-managers__btn {
+      min-width: 181px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+    color: #8F96AA;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__btn {
+    height: 40px;
+    min-width: 170px;
+  }
+
+  &__cancel {
+    height: 40px;
+    min-width: 105px;
+    border: none;
+  }
+  
+  &__layout {
+    background-color: #fff;
+  }
+
+  .btn-sm {
+    height: 31px;
+  }
+}
+.unassign-popover {
+  padding: 15px 15px 6px;
+  font-family: 'Muli', sans-serif;
+
+  &:before {
+    left: auto !important;
+    right: 40px !important;
+    transform: translate(-50%,0) !important;
+  }
+
+  .crew-managers__cancel {
+    width: 100%;
+    margin: 7px 0 0;
+  }
+}
+
+.assign-manager {
+  width: 309px;
+  padding: 10px 0 0;
+  font-family: 'Muli', sans-serif;
+  text-align: left;
+
+  &:before {
+    left: auto !important;
+    right: 50px !important;
+    transform: translate(-50%,0) !important;
+  }
+
+  &__search {
+    position: relative;
+    padding: 0 10px;
+
+    input {
+      height: 40px;
+      width: 100%;
+      padding: 10px 30px 10px 10px;
+      border: 1px solid #00A0FF;
+      border-radius: 4px;
+      background-color: #FFFFFF;
+      box-shadow: 0 0 6px 0 rgba(131,149,160,0.51);
+      //color: #999999;
+      font-family: 'Muli', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-clear {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(0,-50%);
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+
+  &__result {
+    padding: 7px 0;
+
+    &-item {
+      padding: 8px 15px;
+      cursor: pointer;
+      transition: background .15s ease-in-out;
+
+      &:hover {
+        background-color: #F2F8FC;
+      }
+    }
+
+    &-name {
+      display: block;
+      color: #32393F;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &-email {
+      opacity: 0.7;
+      color: #313541;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__no-result {
+    padding: 15px 10px;
+    opacity: 0.5;
+    color: #414141;
+    //font-family: Raleway;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+}

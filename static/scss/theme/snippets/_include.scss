@@ -1,0 +1,14 @@
+//
+//** Snippets Include
+//
+
+@import "custom/login-2";
+.m-form__group {
+  &.has-danger {
+    .form-control-feedback {
+      font-weight: get-font-weight(bold);
+      font-size: get-font-size(regular, '-');
+    }
+  }
+}
+

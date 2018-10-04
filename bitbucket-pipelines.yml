@@ -1,0 +1,64 @@
+pipelines:
+  default:
+    - step:
+        name: Default
+        image: alpine:latest
+        script:
+          - echo "Have a good day"
+  branches:
+    master:
+      - step:
+          name: Build
+          image: node:10
+          caches:
+            - node
+          script:
+            - rm /usr/local/bin/yarn
+            - npm install -g yarn
+            - yarn --production=false
+            - yarn run build
+          artifacts:
+            - .nuxt/**
+
+      - step:
+          name: Deploy to test server
+          image: instrumentisto/rsync-ssh:latest
+          deployment: staging
+          script:
+            - ssh ubuntu@18.196.96.212 "sudo chown -R ubuntu:ubuntu /var/www/jez-web/.nuxt"
+            - rsync -avzP --delete .nuxt/ ubuntu@18.196.96.212:/var/www/jez-web/.nuxt
+            - ssh ubuntu@18.196.96.212 "
+                cd /var/www/jez-web
+                && sudo git reset --hard origin/master
+                && sudo git pull
+                && sudo yarn --production
+                && sudo chown -R www-data:www-data ../jez-web
+                && sudo pm2 restart jez"
+    release:
+      - step:
+          name: Build
+          image: node:10
+          caches:
+            - node
+          script:
+            - rm /usr/local/bin/yarn
+            - npm install -g yarn
+            - yarn --production=false
+            - yarn run prod
+          artifacts:
+            - .nuxt/**
+
+      - step:
+          name: Deploy to prod server
+          image: instrumentisto/rsync-ssh:latest
+          deployment: production
+          script:
+            - ssh ubuntu@18.184.117.67 "sudo chown -R ubuntu:ubuntu /var/www/jez-web/.nuxt"
+            - rsync -avzP --delete .nuxt/ ubuntu@18.184.117.67:/var/www/jez-web/.nuxt
+            - ssh ubuntu@18.184.117.67 "
+                cd /var/www/jez-web
+                && sudo git reset --hard origin/release
+                && sudo git pull
+                && sudo yarn --production
+                && sudo chown -R www-data:www-data ../jez-web
+                && sudo pm2 restart jez"

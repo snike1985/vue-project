@@ -1,0 +1,139 @@
+body, html {
+  font-size: 14px;
+  height: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Muli", sans-serif;
+}
+
+#__nuxt, #__layout, .page-wrapper {
+  height: 100%;
+}
+
+.page-wrapper .m-grid__item {
+  min-height: 100%;
+}
+
+#__layout > div {
+  height: 100%;
+}
+
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+
+.component-fade-enter, .component-fade-leave-to
+  /* .component-fade-leave-active below version 2.1.8 */
+{
+  opacity: 0;
+}
+
+.dropdown-menu {
+  a {
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.b-dropdown {
+  &.w-100 {
+    width: 100%;
+    button {
+      text-align: left;
+      width: 100%;
+    }
+  }
+}
+
+.m-link[disabled] {
+  pointer-events: none;
+  cursor: default;
+  color: $grey;
+}
+.m-link-loader {
+
+  &.m-loader {
+    padding-left: 3rem;
+  }
+  &:before {
+    border-color: $info;
+  }
+}
+
+.btn:disabled {
+  cursor: default;
+}
+
+.close-modal-btn {
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+}
+
+.link-icon {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.m-link {
+  cursor: pointer;
+}
+.medium-dialog {
+  .modal-dialog {
+    max-width: 450px;
+  }
+}
+
+.birthday-container {
+  .form-group {
+    width: 83px;
+  }
+}
+
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.w-45 {
+  width: 45px;
+}
+.buttons-table-container {
+  min-width: 140px;
+}
+.min-w-300 {
+  min-width: 300px;
+}
+.max-w-300 {
+  max-width: 300px;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+

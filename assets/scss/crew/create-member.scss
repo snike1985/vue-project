@@ -1,0 +1,19 @@
+#createMember {
+  .modal-dialog {
+    max-width: 950px !important;
+  }
+  .time-input {
+    width: 90px;
+  }
+  .date-input {
+    width: 115px;
+  }
+  .add-stop-btn {
+    height: 37px;
+    width: 37px;
+    line-height: 37px;
+    &[disabled] {
+      pointer-events: none;
+    }
+  }
+}

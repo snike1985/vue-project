@@ -1,0 +1,68 @@
+.table-wrapper {
+  margin: 0 -25px;
+  text-align: center;
+
+  &__table {
+    position: relative;
+  }
+  .btn-info {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 260px;
+  }
+}
+
+.contacts-form {
+
+  .col-btn {
+    padding-top: 28px;
+    margin-right: 19px;
+  }
+}
+
+.contacts-show-us {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100% !important;
+  text-align: center;
+  padding-right: 37px;
+
+  .m-checkbox {
+    margin-bottom: 0;
+    padding: 0;
+    min-width: 21px;
+  }
+  .btn-delete {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.contacts-title {
+  font-size: 28px;
+}
+
+.contacts-table {
+
+  &__loader {
+    height: 50px;
+
+    &:before {
+      width: 2rem;
+      height: 2rem;
+      margin-top: -1rem;
+      margin-left: -1rem;
+      border-top-color: #00a0ff;
+    }
+  }
+}
+
+.modal-body {
+  max-width: 888px;
+}

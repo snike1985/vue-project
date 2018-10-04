@@ -1,0 +1,139 @@
+.m-aside-left {
+  .group-list {
+    .title {
+      padding: 0 20px;
+      font-size: 16px;
+      background: #444853;
+      height: 55px;
+      line-height: 55px;
+      font-weight: 600;
+    }
+    a[disabled] {
+      pointer-events: none;
+    }
+  }
+}
+.member-details {
+  min-height: 400px;
+  .name {
+    max-width: 195px;
+    display: inline-block;
+  }
+  .edit-icon-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+.crew-name-container {
+  position: relative;
+  .edit-icon-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    opacity: 0;
+    box-shadow: -5px 0px 25px 15px #2c2e3e;
+    transition: .3s ease-out;
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+  .date-change {
+    position: absolute;
+  }
+}
+.member-group {
+  .member-status {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .member-name {
+    min-width: 150px;
+    display: inline-block;
+  }
+}
+.crew-name {
+  .crew-name-wrapper {
+    max-width: calc(100% - 45px);
+    & > .m-btn--icon{
+      vertical-align: top;
+      margin-top: 2px;
+    }
+  }
+  .crew-name-text {
+    width: calc( 100% - 25px);
+    display: inline-block;
+
+    .text {
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+    }
+  }
+  span {
+    line-height: 20px !important;
+  }
+  &:hover {
+    & ~ button {
+      opacity: 1 !important;
+    }
+  }
+}
+.group-name {
+  cursor: default;
+  .name {
+    max-width: calc(100% - 100px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-right: 10px;
+  }
+  span {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  button {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 5px;
+    transition: .3s ease-out;
+  }
+  &.popover-opened {
+    button {
+      opacity: 1;
+    }
+  }
+}
+.show-more-info {
+  cursor: pointer;
+}
+.right-details {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  position: absolute;
+}
+
+.name-wrapper-aside {
+  max-width: calc(100% - 45px);
+  padding-right: 10px;
+}
+.stops-list-details {
+  .show-more-info {
+    &.collapsed {
+      .la-angle-up {
+        display: none;
+      }
+      .la-angle-down {
+        display: inline;
+      }
+    }
+    .la-angle-up {
+      display: inline;
+    }
+    .la-angle-down {
+      display: none;
+    }
+  }
+}

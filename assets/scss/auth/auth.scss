@@ -1,0 +1,43 @@
+.auth-header {
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+  .text {
+    margin-right: 20px;
+  }
+}
+.auth-content {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: -140px;
+  padding: 100px 0 160px;
+}
+.was-validated {
+  .form-control:valid {
+    border-color: #ebedf2;
+  }
+}
+
+.auth-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.form-error {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(#f4516c, 0.4);
+  border-radius: 3px;
+  .icon {
+    padding-right: 20px;
+    i:before {
+      font-size: 25px;
+    }
+  }
+}
+
+.forgot-pass {
+  cursor: pointer;
+}
